@@ -1,35 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import ButtonComponent from "./components/buttonComponent";
+import Foto from "./components/Foto";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ButtonComponent buttonText="aggiungi" />
+      <Foto
+        imgLink="https://media.istockphoto.com/id/1443157897/it/foto/pallone-da-calcio-doro-o-pallone-isolato-su-sfondo-bianco-dellillustrazione-3d.webp?a=1&b=1&s=612x612&w=0&k=20&c=J91fOHUzeZMlIb8rZ-E2dAX9UrKv7R3kzXNnCqjuzbI="
+        imgAlt="Pallone d'oro"
+        imgWidth="200px"
+      ></Foto>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
